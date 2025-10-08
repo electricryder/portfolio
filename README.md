@@ -1,2 +1,2 @@
-﻿## Portefólio de Pedro Rodrigues
-Projetos: CS50x, Python/Flask, SQL, etc.
+﻿## Pedro Rodrigues | Portfolio
+Projects: CS50x, Python/Flask, SQL, etc.
