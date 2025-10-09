@@ -2,7 +2,7 @@
 
 Hello there! I'm Pedro and this is my portfolio!
 
-I'm an ** Electrical Engineer**, transitioning into **Software Development**.
+I'm an **Electrical Engineer**, transitioning into **Software Development**.
 
 Currently deepening my skills in **Python**, **Flask**, **SQL** and **Web Development**.
 
