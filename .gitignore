@@ -1,15 +1,27 @@
-﻿# Python
+# Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-env/
-venv/
 .venv/
+venv/
+env/
+.env
+.pytest_cache/
+.mypy_cache/
+
+# C / build artifacts
+*.o
+*.out
+*.exe
+a.out
+
+# Notebooks
+.ipynb_checkpoints/
 
 # VS Code
 .vscode/
 
 # OS
 .DS_Store
-Thumbs.bd
+Thumbs.db
