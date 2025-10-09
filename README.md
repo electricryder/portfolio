@@ -1,2 +1,5 @@
 ﻿## Pedro Rodrigues | Portfolio
-Projects: CS50x, Python/Flask, SQL, etc.
+
+Hello!
+
+My name is Pedro!
