@@ -30,6 +30,6 @@ make plurality
 ./plurality Alice Bob Charlie
 ```
 
-What I Learned
+**💡What I learned**
 
 Managing data with structs, validating input, and using loops to determine outcomes.
