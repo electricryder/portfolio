@@ -1,34 +1,44 @@
-# 🖼 Filter — CS50x Week 4
+# 🖼 Filter (More) — CS50x Week 4
 
-**Goal:** Apply image filters such as grayscale, sepia, reflect, and blur to bitmap images by directly manipulating pixel data in C.
+**Goal:** Extend the image filter program by implementing more advanced operations like edge detection, in addition to grayscale, reflect, and blur.
 
 ---
 
 ### 🧠 Key Concepts
-- Working with RGB pixel structs (`RGBTRIPLE`)
-- Iterating through 2D arrays
-- Nested loops and edge-handling for image borders
-- Pointer arithmetic and memory safety
+- Manipulating RGB pixel data through structs (`RGBTRIPLE`)
+- Working with 2D arrays to traverse image grids
+- Implementing convolution matrices (kernels) for filters like **blur** and **edges**
+- Understanding how the **Sobel operator** detects edges using gradients
+- Maintaining memory safety and correct pixel averaging
 
 ---
 
-### 🧩 Example Workflow
-./filter -r images/courtyard.bmp reflected.bmp
-
-Outputs a horizontally-reflected version of the input image.  
-Other options:
-- `-g` → grayscale  
-- `-s` → sepia  
-- `-b` → blur  
+### 🧩 Implemented Filters
+| Filter | Description |
+|---------|--------------|
+| **Grayscale** | Converts the image to black and white by averaging RGB values |
+| **Reflect** | Flips the image horizontally |
+| **Blur** | Averages neighboring pixels to create a smoothing effect |
+| **Edges** | Uses the Sobel operator to highlight boundaries in the image |
 
 ---
 
 ### ⚙️ Compile & Run (CS50 Environment)
 ```bash
 make filter
-./filter -r images/courtyard.bmp reflected.bmp
+./filter -e images/courtyard.bmp edges.bmp
+
+Available options:
+
+-g → grayscale
+
+-r → reflect
+
+-b → blur
+
+-e → edges
 ```
 
-What I Learned
+💡 What I Learned
 
-How digital images are represented in memory, how to manipulate color data at the byte level, and how to implement algorithms that modify 2D arrays efficiently.
+How to process image data at the byte level, apply mathematical operations to pixels, and use convolution to create powerful image effects.
