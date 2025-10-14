@@ -1,4 +1,3 @@
-@"
 # 💳 Credit — CS50x Week 1
 
 **Goal:** Determine if a credit card number is valid using the **Luhn checksum**, and identify the issuer (AMEX, MasterCard, VISA).
