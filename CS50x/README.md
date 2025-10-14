@@ -10,8 +10,8 @@ Each `WeekXX` directory will contain exercises with:
 
 Suggested mapping (you can adjust):
 - `Week01` – C basics (loops/conditions) – *Mario, Cash*
-- `Week02` – Arrays – *Readability, Caesar*
-- `Week03` – Algorithms – *Plurality, Tideman*
+- `Week02` – Arrays – *Readability*
+- `Week03` – Algorithms – *Plurality*
 - `Week04` – Memory – *Filter, Recover*
 - `Week05` – Data Structures – *Speller*
 - `Week06` – Python – *Sentimental Mario/Cash/Readability*
