@@ -24,4 +24,5 @@ make readability
 ./readability
 ```
 **💡What I learned**
+
 Looping through strings in C, using conditionals to count characters, and applying a real-world formula programmatically.
