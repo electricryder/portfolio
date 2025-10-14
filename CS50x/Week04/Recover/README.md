@@ -31,7 +31,7 @@ The program scans `card.raw` and extracts valid JPEGs into the current directory
 ```bash
 make recover
 ./recover card.raw
-
+```
 💡 What I Learned
 
 How data is stored on disk, how to handle binary I/O safely in C,
