@@ -27,6 +27,7 @@ Other options:
 ```bash
 make filter
 ./filter -r images/courtyard.bmp reflected.bmp
+```
 
 What I Learned
 
