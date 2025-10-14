@@ -1,4 +1,3 @@
-@"
 # 📖 Readability — CS50x Week 2
 
 **Goal:** Implement a program that calculates the **reading grade level** of a text using the *Coleman–Liau index*.
@@ -25,4 +24,3 @@ make readability
 ./readability
 
 What I learned: Looping through strings in C, using conditionals to count characters, and applying a real-world formula programmatically.
-"@ | Out-File -Encoding utf8 C:\Users\Pedro\portfolio\CS50x\Week02\Readability\README.md
