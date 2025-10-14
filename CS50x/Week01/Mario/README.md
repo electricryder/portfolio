@@ -16,7 +16,7 @@ For each row, print the right number of spaces followed by hashes.
 gcc -o mario mario.c
 ./mario
 ```
-**What I learned**
+**💡What I learned**
 
 How to use nested loops and format text output in C.
 I chose this exercise because, not only is the first one, but also because is show how something so simple can be so challenging in a lower lever language.
