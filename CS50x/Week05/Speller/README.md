@@ -24,16 +24,27 @@
 ### 🧩 Example Run
 
 ./speller dictionaries/large text.txt
+
 MISSPELLED WORDS
+
 mispelled
+
 txtt
+
 WORDS MISSPELLED: 2
+
 WORDS IN DICTIONARY: 143091
+
 WORDS IN TEXT: 1234
+
 TIME IN load: 0.05
+
 TIME IN check: 0.23
+
 TIME IN size: 0.00
+
 TIME IN unload: 0.03
+
 TIME IN TOTAL: 0.31
 
 
