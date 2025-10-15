@@ -7,7 +7,7 @@ Focus areas: functions, exceptions, unit tests, file I/O, regular expressions, O
 - `Functions/` — pure functions, parameters, return values
 - `Exceptions/` — error handling, custom exceptions
 - `File-IO/` — reading/writing text & CSV, context managers
-- `Libraries/` — stdlib usage (e.g., `random`, `datetime`, `sys`, `re`)
+- `Libraries/` — stdlib usage and APIs (e.g., `random`, `datetime`, `sys`, `re`)
 - `Regex/` — validation & parsing with `re`
 - `Unit-Tests/` — `pytest`, test design, fixtures
 - `Object-Oriented/` — classes, methods, dunder methods
