@@ -31,7 +31,7 @@ python playback.py
 python einstein.py
 python bank.py
 python meal.py
-
+```
 
 💬 What I Learned
 How to structure small programs with reusable functions, handle user input safely, and apply conditionals effectively.
