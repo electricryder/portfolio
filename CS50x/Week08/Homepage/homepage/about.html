@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Pedro Rodrigues | Who am I</title>
+
+        <!--------------------------------------------INCLUDES-------------------------------------------->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+          crossorigin="anonymous">
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+          crossorigin="anonymous">
+        </script>
+
+        <link href="styles.css" rel="stylesheet">
+        <!--------------------------------------------INCLUDES-------------------------------------------->
+
+    </head>
+
+
+    <body>
+        <!-- Shared header -->
+        <div id="header-placeholder"></div>
+
+        <!-- Career Objectives Section -->
+        <section id="career" class="about-section container">
+            <div class="row align-items-center justify-content-center">
+                <!-- Left: photo -->
+                <div class="col-md-5 text-center">
+                    <img src="pedro_normal.jpg" alt="Pedro working" class="about-photo">
+                </div>
+
+                <!-- Right: text -->
+                <div class="col-md-7">
+                    <h2 class="section-title">Career Objectives & Background</h2>
+                    <p class="section-text">
+                        My goal is to transition from Electrical Engineering into Software Development,
+                        focusing on Python and web technologies. My engineering background has given me
+                        a strong foundation in logic, system design, and troubleshooting — skills that
+                        now drive my approach to coding.
+                    </p>
+
+                    <p class="section-text">
+                        I’m passionate about learning, improving, and contributing to projects that solve
+                        real-world problems through clean, efficient, and creative code.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies" class="about-section container">
+            <div class="row align-items-center justify-content-center flex-md-row-reverse">
+                <!-- Right: photo -->
+                <div class="col-md-5 text-center">
+                    <img src="pedro-piano.jpg" alt="Pedro playing piano" class="about-photo">
+                </div>
+
+                <!-- Left: text -->
+                <div class="col-md-7">
+                    <h2 class="section-title">Hobbies</h2>
+                    <p class="section-text">
+                        Outside of coding and engineering, I’m deeply connected to music.
+                        I enjoy playing the piano and bass guitar — it helps me express
+                        creativity and balance technical thinking with art.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Shared footer -->
+        <div id="footer-placeholder"></div>
+
+
+        <!--------------------------------------------- SCRIPTS --------------------------------------------->
+
+        <!------------------------------------- Header ------------------------------------->
+        <script>
+            fetch("header.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("header-placeholder").innerHTML = data);
+        </script>
+
+        <!------------------------------------- Footer ------------------------------------->
+        <script>
+            fetch("footer.html")
+                .then(response => response.text())
+                .then(data => document.getElementById("footer-placeholder").innerHTML = data);
+        </script>
+
+    </body>
+
+</html>
