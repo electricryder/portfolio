@@ -1,21 +1,37 @@
-### 🧠 Key Concepts
-- Function definitions and parameters  
-- Return values and type conversion  
-- Default arguments and named parameters  
-- Modular code structure and reusability  
+# 🧮 CS50p — Functions & Conditionals
+
+**Goal:** Practice defining and using Python functions, handling conditionals, and organizing reusable code.
 
 ---
 
-### 🧩 Example Files
+### 🧩 Exercises
+
 | File | Description |
 |------|--------------|
-| `calculator.py` | Simple calculator with addition, subtraction, multiplication, and division functions |
-| `indoor.py` | Converts input text to lowercase (demonstrates input/output with functions) |
-| `energy.py` | Calculates E = mc² using a custom function |
-| `meal.py` | Determines meal time based on user input and conversion functions |
+| `indoor.py` | Converts user input to lowercase text. Demonstrates `input()` and string methods. |
+| `playback.py` | Replaces spaces with `...` to simulate speech speed. |
+| `einstein.py` | Calculates energy (E = m × c²) based on user-provided mass. |
+| `bank.py` | Reads a greeting and returns \$0, \$20, or \$100 depending on politeness. |
+| `meal.py` | Determines meal time (breakfast, lunch, or dinner) from a time input like `7:30`. |
 
 ---
 
-### 💡 What I Learned
-How to write clean, modular Python code using functions that handle specific tasks.  
-This section built the foundation for larger, structured programs in later CS50p topics.
+### 💡 Key Concepts
+- Function definitions and parameters  
+- Conditional statements (`if`, `elif`, `else`)  
+- Input validation and string manipulation  
+- Type conversion and arithmetic operations  
+
+---
+
+### ▶️ Run examples
+```bash
+python indoor.py
+python playback.py
+python einstein.py
+python bank.py
+python meal.py
+
+
+💬 What I Learned
+How to structure small programs with reusable functions, handle user input safely, and apply conditionals effectively.
