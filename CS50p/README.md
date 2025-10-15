@@ -11,8 +11,6 @@ Focus areas: functions, exceptions, unit tests, file I/O, regular expressions, O
 - `Regex/` — validation & parsing with `re`
 - `Unit-Tests/` — `pytest`, test design, fixtures
 - `Object-Oriented/` — classes, methods, dunder methods
-- `CLI-Tools/` — small command-line apps (argparse/sys.argv)
-- `Etc/` — misc utilities & final-project prep
 
 ## ▶️ Running
 ```bash
