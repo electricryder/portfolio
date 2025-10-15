@@ -22,10 +22,3 @@ If a folder includes tests:
 pip install -U pytest
 pytest -q
 ```
-📝 Per-exercise README template
-# Exercise: <Name>
-**Topic:** e.g., functions / regex / OOP
-**Goal:** What the program should do
-**Approach:** Key steps and reasoning
-**How to run:** `python <file>.py` (+ sample input/output)
-**Notes:** Edge cases and possible improvements
