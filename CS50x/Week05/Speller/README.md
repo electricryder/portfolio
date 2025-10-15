@@ -25,12 +25,6 @@
 
 ./speller dictionaries/large text.txt
 
-MISSPELLED WORDS
-
-mispelled
-
-txtt
-
 WORDS MISSPELLED: 2
 
 WORDS IN DICTIONARY: 143091
