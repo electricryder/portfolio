@@ -14,10 +14,10 @@ Suggested mapping (you can adjust):
 - `Week03` – Algorithms – *Plurality*
 - `Week04` – Memory – *Filter, Recover*
 - `Week05` – Data Structures – *Speller*
-- `Week06` – Python – *Sentimental Mario/Cash/Readability*
+- `Week06` – Python – *Sentimental Mario/Readability*
 - `Week07` – SQL – *Movies*
-- `Week08` – Web (Flask) – *Homepage, Finance*
-- `Week09` – Flask Final tweaks
+- `Week08` – Web (HTML|CSS|JavaScript) – *Homepage*
+- `Week09` – Flask
 - `Week10` – Final Project
 
 ## ▶️ Running examples
