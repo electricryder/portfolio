@@ -16,7 +16,7 @@ Suggested mapping (you can adjust):
 - `Week05` – Data Structures – *Speller*
 - `Week06` – Python – *Sentimental Mario/Readability*
 - `Week07` – SQL – *Movies*
-- `Week08` – Web (HTML|CSS|JavaScript) – *Homepage*
+- `Week08` – Web (HTML | CSS | JavaScript) – *Homepage*
 - `Week09` – Flask
 - `Week10` – Final Project
 
