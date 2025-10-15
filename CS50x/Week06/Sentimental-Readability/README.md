@@ -17,16 +17,11 @@
 Text: Congratulations! Today is your day.
 Grade 3
 
-yaml
-Copiar código
-
 ---
 
 ### 🧩 Core Formula
 index = 0.0588 * L - 0.296 * S - 15.8
 
-yaml
-Copiar código
 Where  
 - **L** = average number of letters per 100 words  
 - **S** = average number of sentences per 100 words  
