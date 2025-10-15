@@ -22,10 +22,11 @@
 
 ### 🧩 Example
 Name: Alice
-Birthday: 2000-05-22
+Day: 22
+Month: 5
 
 Displayed as:
-🎂 Alice — May 22
+🎂 Alice — 22/5
 
 ---
 
