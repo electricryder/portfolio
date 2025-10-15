@@ -17,8 +17,9 @@ Focus areas: functions, exceptions, unit tests, file I/O, regular expressions, O
 ## ▶️ Running
 ```bash
 python script.py
+```
 If a folder includes tests:
-
+```
 pip install -U pytest
 pytest -q
 ```
