@@ -22,7 +22,9 @@
 
 ### 🧩 Example
 Name: Alice
+
 Day: 22
+
 Month: 5
 
 Displayed as:
