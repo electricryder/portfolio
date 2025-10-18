@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Index
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>Symbol</th>
+                <th>Company</th>
+                <th>Shares</th>
+                <th>Current Price</th>
+                <th>Holding Value</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for element in holdings %}
+                <tr>
+                    <td>{{element.symbol}}</td>
+                    <td>{{element.name}}</td>
+                    <td>{{element.sum_shares}}</td>
+                    <td>{{element.stock_price}}</td>
+                    <td>{{element.stock_total}}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>Cash</th>
+                <th>Total Balance</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>{{ current_cash }}</td>
+                <td>{{ cash_balance }}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}

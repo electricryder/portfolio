@@ -1,0 +1,33 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    History
+{% endblock %}
+
+{% block main %}
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>Symbol</th>
+                <th>Company</th>
+                <th>Shares</th>
+                <th>Price</th>
+                <th>Date/Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for element in transactions | reverse %}
+                <tr>
+                    <td>{{element.symbol}}</td>
+                    <td>{{element.name}}</td>
+                    <td class="{{ 'text-success' if element.shares > 0 else 'text-danger' }}">
+                        {{ 'Bought' if element.shares > 0 else 'Sold' }} {{ element.shares | abs }}
+                    </td>
+                    <td>{{element.price | usd}}</td>
+                    <td>{{element.transacted}}</td>
+
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
