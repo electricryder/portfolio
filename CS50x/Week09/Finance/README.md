@@ -25,9 +25,6 @@
 ---
 
 ### ▶️ Running Locally
-```bash
-flask run
-```
 
 If you use the CS50 IDE, start the app with:
 
