@@ -14,29 +14,6 @@
 
 ---
 
-### 📁 Project Structure
-
-
-finance/
-├── app.py
-├── helpers.py
-├── finance.db
-├── static/
-│ └── styles.css
-├── templates/
-│ ├── layout.html
-│ ├── index.html
-│ ├── login.html
-│ ├── register.html
-│ ├── quote.html
-│ ├── buy.html
-│ ├── sell.html
-│ └── history.html
-└── README.md
-
-
----
-
 ### ⚙️ Features
 ✅ Register & Log In — Secure authentication using hashed passwords  
 ✅ Get Quotes — Fetch real-time stock prices from an external API  
