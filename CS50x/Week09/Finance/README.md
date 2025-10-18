@@ -28,8 +28,10 @@
 
 If you use the CS50 IDE, start the app with:
 
+bash
+```
 flask run
-
+```
 
 Then open the displayed URL in your browser.
 
