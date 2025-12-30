@@ -1,0 +1,6 @@
+# Ignorar tudo por defeito
+*
+
+# Mas permitir estas pastas
+!CS50p/
+!.gitignore
