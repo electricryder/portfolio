@@ -1,0 +1,83 @@
+Name: Pedro Rodrigues
+GitHub: https://github.com/electricryder
+CS50x Problem Set 8 — Homepage
+
+Overview
+This project is my personal homepage — a small portfolio website built as part of CS50x’s Problem Set 8.
+It introduces who I am, my professional background, and provides contact links.
+The website is fully responsive, uses Bootstrap for layout and components, includes custom CSS for styling, and JavaScript for interactivity.
+
+Structure
+The project consists of four HTML pages and a shared CSS file (styles.css):
+
+1. index.html — The home page
+   - Features a typing animation that reveals my name.
+   - Displays a tagline that fades in smoothly after typing finishes.
+   - Serves as the visual introduction to the site.
+
+2. about.html — “Who am I” page
+   - Two main sections:
+     - Career Objectives & Background: explains my transition from Electrical Engineering to Software Development.
+     - Hobbies: describes my passion for music, with an accompanying image.
+   - Uses Bootstrap’s grid system for a responsive two-column layout (image + text).
+
+3. projects.html — Projects placeholder
+   - Currently marked “🚧 Under Development 🚧”.
+   - Includes a simple blinking animation using CSS keyframes.
+   - Content centered vertically and horizontally using Flexbox.
+
+4. contact.html — Contacts & Links page
+   - Displays my phone number, email, LinkedIn, and GitHub links.
+   - Links are styled as rounded buttons with hover effects.
+   - The phone number looks like a button but is not clickable.
+
+In addition, both the header (banner + navbar) and footer are shared across all pages using JavaScript fetch() to load header.html and footer.html.
+
+Technologies Used
+- HTML5: Semantic structure for accessibility and clarity.
+- CSS3: Custom styling with transitions, animations, and color variables.
+- Bootstrap 5.3: Used for layout grids, responsive utilities, and nav bar structure.
+- JavaScript:
+  - Typing animation on the home page.
+  - fetch() to dynamically load shared header and footer.
+- Flexbox: For vertical and horizontal centering of content.
+
+Design Choices
+- Color palette: Inspired by The Matrix — black background (--vamp_blk) with shades of neon green (--green_1, --green_2, --green_3).
+- Font: Monospace font (Consolas, Courier New) for a “terminal” aesthetic.
+- Layout: Consistent spacing and alignment using Bootstrap containers and Flexbox.
+- Hover animations: Subtle effects on nav links, buttons, and images for interactivity.
+- Footer: Fixed at the bottom with consistent theme styling.
+
+Responsive Features
+- All pages scale properly on desktops, tablets, and phones.
+- Images and sections use relative units (vh, %, max-width) to adjust dynamically.
+- Navbar and contact buttons wrap gracefully on small screens.
+
+CS50 Requirements Checklist
+| Requirement | Implemented | Description |
+|--------------|--------------|--------------|
+| At least 4 distinct .html pages | ✅ | index, about, projects, contact |
+| Use of Bootstrap | ✅ | Navbar, grid system, responsive utilities |
+| At least one stylesheet | ✅ | styles.css with color variables and effects |
+| At least one JavaScript file or inline script | ✅ | Typing effect, fetch() for header/footer |
+| Use of at least ten distinct HTML tags | ✅ | html, head, body, div, h1, h2, p, a, img, section, nav, script |
+| Responsive design | ✅ | Works well on all screen sizes |
+| Personal touch (custom design/content) | ✅ | Matrix-inspired theme, interactive elements |
+
+Future Improvements
+- Add actual projects with thumbnails and descriptions.
+- Create a contact form using Flask (to be implemented in future exercises).
+- Expand CSS animations for more dynamic transitions.
+
+Credits
+All design, text, and code written by Pedro Rodrigues.
+No external templates used.
+Images and GIFs are personal or free to use.
+
+Ready for submission.
+All required elements are present, organized, and fully functional.
+
+Acknowledgments
+AI assistance (ChatGPT by OpenAI) was used to help structure, debug, and document this project and to help create
+this present .txt file, while all code and design decisions were written and implemented by me, Pedro Rodrigues.
