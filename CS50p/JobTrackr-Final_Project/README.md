@@ -1,6 +1,5 @@
 # JobTrackr
 ### CS50P Final Project — Pedro Rodrigues
-### Video Demo: https://youtu.be/XpcvMToD5Vg
 
 ---
 
@@ -107,12 +106,6 @@ Use the menu to:
 - JSON persistence
 - Pytest test suite
 - Modular architecture
-
----
-
-## 🎬 Video Demo
-
-**Video:** https://youtu.be/XpcvMToD5Vg
 
 ---
 
