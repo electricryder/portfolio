@@ -1,0 +1,6 @@
+[
+  "test_fuel.py::test_conversion",
+  "test_fuel.py::test_dividebyzero",
+  "test_fuel.py::test_gauge",
+  "test_fuel.py::test_invalidfraction"
+]

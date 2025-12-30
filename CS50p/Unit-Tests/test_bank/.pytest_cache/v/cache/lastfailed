@@ -1,0 +1,5 @@
+{
+  "test_bank.py::test_hello": true,
+  "test_bank.py::test_h": true,
+  "test_bank.py::test_other_sit": true
+}

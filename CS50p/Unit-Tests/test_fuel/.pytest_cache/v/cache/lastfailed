@@ -1,0 +1,4 @@
+{
+  "test_fuel.py::test_conversion": true,
+  "test_fuel.py::test_gauge": true
+}

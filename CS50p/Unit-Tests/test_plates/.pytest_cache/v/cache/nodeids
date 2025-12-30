@@ -1,0 +1,7 @@
+[
+  "test_plates.py::test_is_alphanum",
+  "test_plates.py::test_numposition",
+  "test_plates.py::test_valid_extension",
+  "test_plates.py::test_valid_plates",
+  "test_plates.py::test_valid_twoletters"
+]

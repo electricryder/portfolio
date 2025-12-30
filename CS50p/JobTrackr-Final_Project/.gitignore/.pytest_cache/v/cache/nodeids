@@ -1,0 +1,5 @@
+[
+  "test_project.py::test_count_by_status",
+  "test_project.py::test_count_jobs",
+  "test_project.py::test_search_keyword"
+]
