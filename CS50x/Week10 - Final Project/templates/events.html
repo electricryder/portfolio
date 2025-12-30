@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+{% block main %}
+
+  <div class="home-poster">
+    <img src="{{ url_for('static', filename='images/vortex_logo.jpeg') }}" alt="Vortex logo">
+  </div>
+
+  <hr class="hr-white">
+
+  <div class="d-flex justify-content-between align-items-center">
+    <div class="section-title">Upcoming Events</div>
+
+    {% if session.get("is_admin") %}
+      <a class="btn btn-primary btn-sm" href="/admin/events/new">New Event</a>
+    {% endif %}
+  </div>
+
+  {% if upcoming|length == 0 %}
+    <p>No upcoming events.</p>
+  {% else %}
+    <div class="list-group mb-4">
+      {% for e in upcoming %}
+        <div class="list-group-item">
+          <div class="d-flex gap-3">
+            <a href="/events/{{ e.id }}" class="clean-link d-flex gap-3 flex-grow-1">
+              <div style="width:160px; flex:0 0 160px;">
+                {% if e.image_url %}
+                  <img src="{{ e.image_url }}" alt="Event image" class="event-thumb">
+                {% else %}
+                  <div style="width:160px; height:106px; border:1px solid #fff;"></div>
+                {% endif %}
+              </div>
+
+              <div class="flex-grow-1">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1" style="text-transform:uppercase; letter-spacing:0.06em; font-weight:900;">
+                    {{ e.title }}
+                  </h5>
+                  <small>{{ e.starts_at | dt }}</small>
+                </div>
+                <p class="mb-1">{{ e.description }}</p>
+
+                {% if not session.get("is_admin") %}
+                  <small>Member price: {{ e.price_member_cents | eur }}</small>
+                {% endif %}
+              </div>
+            </a>
+
+            <div class="action-stack">
+              {% if session.get("is_admin") %}
+                <a class="btn btn-outline-primary btn-sm" href="/admin/events/{{ e.id }}/edit">Edit</a>
+                <form method="post" action="/admin/events/{{ e.id }}/delete" onsubmit="return confirm('Delete this event?');">
+                  <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                </form>
+              {% else %}
+                <a class="btn btn-primary btn-sm" href="/events/{{ e.id }}/checkout">Buy</a>
+              {% endif %}
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+  <hr class="hr-white">
+
+  <div class="section-title">Past Events</div>
+
+  {% if past|length == 0 %}
+    <p>No past events.</p>
+  {% else %}
+    <div class="list-group">
+      {% for e in past %}
+        <div class="list-group-item">
+          <div class="d-flex gap-3">
+            <a href="/events/{{ e.id }}" class="clean-link d-flex gap-3 flex-grow-1">
+              <div style="width:160px; flex:0 0 160px;">
+                {% if e.image_url %}
+                  <img src="{{ e.image_url }}" alt="Event image" class="event-thumb">
+                {% else %}
+                  <div style="width:160px; height:106px; border:1px solid #fff;"></div>
+                {% endif %}
+              </div>
+
+              <div class="flex-grow-1">
+                <div class="d-flex w-100 justify-content-between">
+                  <h5 class="mb-1" style="text-transform:uppercase; letter-spacing:0.06em; font-weight:900;">
+                    {{ e.title }}
+                  </h5>
+                  <small>{{ e.starts_at | dt }}</small>
+                </div>
+                <p class="mb-1">{{ e.description }}</p>
+              </div>
+            </a>
+
+            {% if session.get("is_admin") %}
+              <div class="action-stack">
+                <a class="btn btn-outline-primary btn-sm" href="/admin/events/{{ e.id }}/edit">Edit</a>
+                <form method="post" action="/admin/events/{{ e.id }}/delete" onsubmit="return confirm('Delete this event?');">
+                  <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                </form>
+              </div>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  {% endif %}
+
+{% endblock %}

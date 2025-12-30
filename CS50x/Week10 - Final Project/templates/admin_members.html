@@ -1,0 +1,46 @@
+{% extends "layout.html" %}
+{% block main %}
+
+  <div class="d-flex justify-content-between align-items-center">
+    <div class="section-title">Members</div>
+    <a class="btn btn-primary btn-sm" href="/admin/members/new">New Member</a>
+  </div>
+
+  {% if members|length == 0 %}
+    <div class="panel">No members found.</div>
+  {% else %}
+    <div class="panel">
+      <table class="table table-bordered mb-0">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Member #</th>
+            <th>Dues paid until</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for m in members %}
+            <tr>
+              <td>{{ m.id }}</td>
+              <td>{{ m.name }}</td>
+              <td>{{ m.email }}</td>
+              <td>{{ m.member_number }}</td>
+              <td>{{ m.dues_paid_until | d }}</td>
+              <td class="d-flex gap-2">
+                <a class="btn btn-outline-primary btn-sm" href="/admin/members/{{ m.id }}/edit">Edit</a>
+                <form method="post" action="/admin/members/{{ m.id }}/delete"
+                      onsubmit="return confirm('Delete this member? This will also delete their tickets.');">
+                  <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+                </form>
+              </td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% endif %}
+
+{% endblock %}

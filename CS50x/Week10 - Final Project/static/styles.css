@@ -1,0 +1,201 @@
+/* ---------- GLOBAL ---------- */
+* { box-sizing: border-box; }
+
+body {
+  background: #000;
+  color: #fff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+/* Force “no gray” anywhere */
+.text-muted, .muted, small, .form-text, .text-secondary {
+  color: #fff !important;
+  opacity: 1 !important;
+}
+
+/* ---------- LINKS ---------- */
+a { color: #fff; text-decoration: none; }
+a:hover { text-decoration: underline; }
+a.clean-link { color: inherit; text-decoration: none; }
+a.clean-link:hover { text-decoration: none; }
+
+/* ---------- NAVBAR (minimal) ---------- */
+.navbar {
+  background: #000 !important;
+  border-bottom: 1px solid #fff;
+}
+
+.navbar-logo {
+  height: 26px;
+  width: auto;
+  display: block;
+}
+
+.navbar .nav-link {
+  color: #fff !important;
+  opacity: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.82rem;
+  padding-left: 14px;
+  padding-right: 14px;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link.active {
+  text-decoration: underline;
+}
+
+/* ---------- BUTTONS (white) ---------- */
+.btn {
+  border-radius: 0;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 10px 14px;
+}
+
+.btn-sm {
+  padding: 8px 12px;
+  font-weight: 800;
+}
+
+.btn-primary, .btn-success, .btn-outline-primary {
+  background: #fff;
+  color: #000;
+  border: 1px solid #fff;
+}
+
+.btn-primary:hover, .btn-success:hover, .btn-outline-primary:hover {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn-danger {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+}
+
+.btn-danger:hover {
+  background: #fff;
+  color: #000;
+  border: 1px solid #fff;
+}
+
+/* ---------- FORMS ---------- */
+.form-control, .form-select {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0;
+}
+
+.form-control:focus, .form-select:focus {
+  background: #000;
+  color: #fff;
+  border-color: #fff;
+  box-shadow: none;
+}
+
+::placeholder { color: #fff; opacity: 0.75; }
+
+/* ---------- PANELS / SECTIONS ---------- */
+.panel {
+  border: 1px solid #fff;
+  border-radius: 0;
+  padding: 18px;
+}
+
+.section-title {
+  margin-top: 26px;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-weight: 900;
+  font-size: 0.95rem;
+}
+
+.hr-white {
+  border: 0;
+  border-top: 1px solid #fff;
+  margin: 18px 0;
+}
+
+/* ---------- LIST ITEMS ---------- */
+.list-group-item {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0;
+  margin-bottom: 14px;
+}
+
+.action-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: flex-end;
+}
+
+/* ---------- EVENT IMAGE ---------- */
+.event-thumb {
+  width: 160px;
+  height: 106px;
+  object-fit: cover;
+  border: 1px solid #fff;
+}
+
+.event-hero {
+  width: 100%;
+  max-height: 420px;
+  object-fit: cover;
+  border: 1px solid #fff;
+}
+
+/* ---------- HOME POSTER ---------- */
+.home-poster {
+  min-height: 42vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 54px 0 32px 0;
+}
+
+/* IMPORTANT: no border on home logo */
+.home-poster img {
+  width: min(520px, 80vw);
+  height: auto;
+  display: block;
+  border: 0;
+}
+
+/* ---------- TABLE ---------- */
+.table { color: #fff; }
+.table th, .table td { border-color: #fff; }
+
+/* ---------- ALERTS ---------- */
+.alert {
+  background: #000;
+  color: #fff;
+  border: 1px solid #fff;
+  border-radius: 0;
+  margin-bottom: 12px;
+}
+
+/* ---------- FOOTER ---------- */
+.footer {
+  color: #fff;
+  text-align: center;
+  margin-top: 60px;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+}
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 576px) {
+  .event-thumb { width: 120px; height: 84px; }
+  .btn { padding: 9px 12px; }
+}

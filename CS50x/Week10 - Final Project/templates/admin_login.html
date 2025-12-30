@@ -1,0 +1,19 @@
+{% extends "layout.html" %}
+{% block main %}
+
+  <div class="section-title">Admin Login</div>
+
+  <div class="panel" style="max-width: 520px;">
+    <form method="post">
+      <label class="form-label" style="text-transform:uppercase; letter-spacing:0.08em; font-weight:800;">Username</label>
+      <input class="form-control mb-3" name="username">
+
+      <label class="form-label" style="text-transform:uppercase; letter-spacing:0.08em; font-weight:800;">Password</label>
+      <input class="form-control mb-3" name="password" type="password">
+
+      <button class="btn btn-primary" type="submit">Login</button>
+      <a class="btn btn-outline-primary ms-2" href="/events">Back</a>
+    </form>
+  </div>
+
+{% endblock %}

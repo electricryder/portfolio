@@ -1,0 +1,55 @@
+{% extends "layout.html" %}
+{% block main %}
+
+  <div class="panel">
+    <div class="d-flex justify-content-between align-items-start gap-3">
+      <div>
+        <div style="text-transform:uppercase; letter-spacing:0.12em; font-weight:900;">
+          {{ event.title }}
+        </div>
+
+        <div class="mt-2">
+          <span style="text-transform:uppercase; letter-spacing:0.08em; font-weight:800;">Date:</span>
+          {{ event.starts_at | dt }}
+        </div>
+
+        {% if not session.get("is_admin") and not event.is_past %}
+          <div class="mt-2">
+            <span style="text-transform:uppercase; letter-spacing:0.08em; font-weight:800;">Member price:</span>
+            {{ event.price_member_cents | eur }}
+          </div>
+        {% endif %}
+      </div>
+
+      {% if session.get("is_admin") %}
+        <div class="action-stack">
+          <a class="btn btn-outline-primary btn-sm" href="/admin/events/{{ event.id }}/edit">Edit</a>
+          <form method="post" action="/admin/events/{{ event.id }}/delete" onsubmit="return confirm('Delete this event?');">
+            <button class="btn btn-danger btn-sm" type="submit">Delete</button>
+          </form>
+        </div>
+      {% endif %}
+    </div>
+
+    <hr class="hr-white">
+
+    {% if event.image_url %}
+      <img class="event-hero mb-3" src="{{ event.image_url }}" alt="Event image">
+    {% endif %}
+
+    <p class="mb-0">{{ event.description }}</p>
+
+    {% if not session.get("is_admin") %}
+      <div class="mt-4">
+        {% if event.is_past %}
+          <div class="panel">
+            This event is in the past. Tickets are no longer available.
+          </div>
+        {% else %}
+          <a class="btn btn-primary" href="/events/{{ event.id }}/checkout">Buy</a>
+        {% endif %}
+      </div>
+    {% endif %}
+  </div>
+
+{% endblock %}

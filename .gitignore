@@ -1,9 +1,18 @@
-# ignore everything by default
-*
+# Python junk
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
 
-# allow git files
-!.gitignore
+# Editor / OS
+.vscode/
+.DS_Store
+Thumbs.db
 
-# allow the CS50p folder and everything inside it
-!CS50p/
-!CS50p/**
+# Databases / sessions (para o Flask)
+*.db
+*.sqlite
+*.sqlite3
+flask_session/
+instance/

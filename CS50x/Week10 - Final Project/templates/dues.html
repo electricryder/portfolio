@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+{% block main %}
+
+  <div class="section-title">Membership Dues</div>
+
+  <div class="panel mb-3">
+    <div style="text-transform:uppercase; letter-spacing:0.08em; font-weight:900;">Status</div>
+    <div class="mt-2">Paid until: {{ g.user.dues_paid_until }}</div>
+
+    {% if g.user.dues_ok %}
+      <div class="mt-3 panel">Your dues are up to date. You can still pay more months in advance.</div>
+    {% else %}
+      <div class="mt-3 panel">Your dues are not up to date. Please pay to access the full member features.</div>
+    {% endif %}
+  </div>
+
+  <div class="panel" style="max-width: 520px;">
+    <div style="text-transform:uppercase; letter-spacing:0.08em; font-weight:900;">Choose months</div>
+
+    <form method="post" action="/dues/checkout" class="mt-3">
+      <label class="form-label" style="text-transform:uppercase; letter-spacing:0.08em; font-weight:800;">
+        Months (1€ each)
+      </label>
+
+      <select class="form-select mb-3" name="months">
+        <option value="1">1</option>
+        <option value="3">3</option>
+        <option value="6">6</option>
+        <option value="12" selected>12</option>
+        <option value="18">18</option>
+        <option value="24">24</option>
+      </select>
+
+      <button class="btn btn-primary" type="submit">Continue</button>
+      <a class="btn btn-outline-primary ms-2" href="/member">Back</a>
+    </form>
+  </div>
+
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "layout.html" %}
+{% block main %}
+
+  <div class="section-title">Tickets</div>
+
+  {% if tickets|length == 0 %}
+    <div class="panel">No tickets yet.</div>
+  {% else %}
+    <div class="panel">
+      <table class="table table-bordered mb-0">
+        <thead>
+          <tr>
+            <th>Ticket ID</th>
+            <th>Event</th>
+            <th>Event Date</th>
+            <th>Status</th>
+            <th>Bought At</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for t in tickets %}
+            <tr>
+              <td>{{ t.id }}</td>
+              <td>{{ t.title }}</td>
+              <td>{{ t.starts_at | dt }}</td>
+              <td>{{ t.status }}</td>
+              <td>{{ t.created_at | dt }}</td>
+            </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+  {% endif %}
+
+{% endblock %}
+

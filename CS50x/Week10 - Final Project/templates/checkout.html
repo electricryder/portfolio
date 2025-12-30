@@ -1,0 +1,42 @@
+{% extends "layout.html" %}
+{% block main %}
+
+  <div class="section-title">Ticket Payment</div>
+
+  <div class="panel">
+    <div style="text-transform:uppercase; letter-spacing:0.12em; font-weight:900;">
+      {{ event.title }}
+    </div>
+    <div class="mt-2">Date: {{ event.starts_at | dt }}</div>
+
+    {% if event.image_url %}
+      <img class="event-hero mt-3" src="{{ event.image_url }}" alt="Event image">
+    {% endif %}
+
+    <hr class="hr-white">
+
+    {% if already_bought %}
+      <div class="panel">
+        You already bought a ticket for this event.
+      </div>
+      <div class="mt-3">
+        <a class="btn btn-outline-primary" href="/tickets">Go to tickets</a>
+        <a class="btn btn-outline-primary ms-2" href="/events/{{ event.id }}">Back</a>
+      </div>
+    {% else %}
+      <div class="panel">
+        This is a simulated payment screen. Click confirm to create your ticket.
+      </div>
+
+      <div class="mt-3" style="text-transform:uppercase; letter-spacing:0.08em; font-weight:800;">
+        Total: {{ event.price_member_cents | eur }}
+      </div>
+
+      <form method="post" class="mt-3">
+        <button class="btn btn-primary" type="submit">Confirm payment</button>
+        <a class="btn btn-outline-primary ms-2" href="/events/{{ event.id }}">Cancel</a>
+      </form>
+    {% endif %}
+  </div>
+
+{% endblock %}

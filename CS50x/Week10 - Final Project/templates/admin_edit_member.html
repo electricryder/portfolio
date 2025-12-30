@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+{% block main %}
+
+  <div class="section-title">Edit Member</div>
+
+  <form method="post" class="panel" style="max-width: 820px;">
+    <label class="form-label" style="text-transform:uppercase; letter-spacing:0.08em; font-weight:800;">Name</label>
+    <input class="form-control mb-3" name="name" value="{{ member.name }}">
+
+    <label class="form-label" style="text-transform:uppercase; letter-spacing:0.08em; font-weight:800;">Email</label>
+    <input class="form-control mb-3" name="email" type="email" value="{{ member.email }}">
+
+    <label class="form-label" style="text-transform:uppercase; letter-spacing:0.08em; font-weight:800;">Member number</label>
+    <input class="form-control mb-3" name="member_number" value="{{ member.member_number }}">
+
+    <label class="form-label" style="text-transform:uppercase; letter-spacing:0.08em; font-weight:800;">Dues paid until (DD/MM/AAAA)</label>
+    <input class="form-control mb-3" name="dues_paid_until" value="{{ member.dues_paid_until | d }}">
+
+    <label class="form-label" style="text-transform:uppercase; letter-spacing:0.08em; font-weight:800;">New password (optional)</label>
+    <input class="form-control mb-3" name="new_password" type="password" placeholder="Leave blank to keep current password">
+
+    <button class="btn btn-primary" type="submit">Save</button>
+    <a class="btn btn-outline-primary ms-2" href="/admin/members">Cancel</a>
+  </form>
+
+{% endblock %}

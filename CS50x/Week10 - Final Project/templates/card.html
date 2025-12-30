@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+{% block main %}
+
+  <div class="section-title">Member Card</div>
+
+  <div class="panel" style="max-width: 720px;">
+    <div style="text-transform:uppercase; letter-spacing:0.12em; font-weight:900;">{{ g.user.name }}</div>
+    <div class="mt-2">Member #: {{ g.user.member_number }}</div>
+    <div class="mt-2">Paid until: {{ g.user.dues_paid_until | d }}</div>
+
+    <hr class="hr-white">
+
+    <div style="text-transform:uppercase; letter-spacing:0.08em; font-weight:800;">
+      {% if g.user.dues_ok %}
+        Status: UP TO DATE
+      {% else %}
+        Status: NOT UP TO DATE
+      {% endif %}
+    </div>
+  </div>
+
+{% endblock %}

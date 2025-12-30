@@ -1,0 +1,40 @@
+{% extends "layout.html" %}
+{% block main %}
+
+  {% if event %}
+    <div class="section-title">Edit Event</div>
+    <form method="post" class="panel" style="max-width: 820px;" action="/admin/events/{{ event.id }}/edit">
+  {% else %}
+    <div class="section-title">New Event</div>
+    <form method="post" class="panel" style="max-width: 820px;" action="/admin/events/new">
+  {% endif %}
+
+    <label class="form-label" style="text-transform:uppercase; letter-spacing:0.08em; font-weight:800;">Title</label>
+    <input class="form-control mb-3" name="title" value="{{ event.title if event else '' }}">
+
+    <label class="form-label" style="text-transform:uppercase; letter-spacing:0.08em; font-weight:800;">Description</label>
+    <textarea class="form-control mb-3" name="description" rows="4">{{ event.description if event else '' }}</textarea>
+
+    <div class="row">
+      <div class="col-md-6">
+        <label class="form-label" style="text-transform:uppercase; letter-spacing:0.08em; font-weight:800;">Date (DD/MM/AAAA)</label>
+        <input class="form-control mb-3" name="date" placeholder="31/12/2025" value="{{ form_date if form_date is defined else '' }}">
+      </div>
+      <div class="col-md-6">
+        <label class="form-label" style="text-transform:uppercase; letter-spacing:0.08em; font-weight:800;">Time (HH:MM)</label>
+        <input class="form-control mb-3" name="time" placeholder="21:00" value="{{ form_time if form_time is defined else '' }}">
+      </div>
+    </div>
+
+    <label class="form-label" style="text-transform:uppercase; letter-spacing:0.08em; font-weight:800;">Image URL</label>
+    <input class="form-control mb-3" name="image_url" value="{{ event.image_url if event and event.image_url else '' }}">
+
+    <label class="form-label" style="text-transform:uppercase; letter-spacing:0.08em; font-weight:800;">Member price (cents)</label>
+    <input class="form-control mb-3" name="price_member_cents" type="number" min="0"
+           value="{{ event.price_member_cents if event else 600 }}">
+
+    <button class="btn btn-primary" type="submit">Save</button>
+    <a class="btn btn-outline-primary ms-2" href="/events">Cancel</a>
+  </form>
+
+{% endblock %}
