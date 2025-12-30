@@ -1,6 +1,9 @@
-# Ignorar tudo por defeito
+# ignore everything by default
 *
 
-# Mas permitir estas pastas
-!CS50p/
+# allow git files
 !.gitignore
+
+# allow the CS50p folder and everything inside it
+!CS50p/
+!CS50p/**
